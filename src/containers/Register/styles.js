@@ -47,14 +47,11 @@ export const RightContainer = styled.div`
 `;
 export const Title = styled.h2`
   font-family: "Flavors", cursive;
-  color: #ffffff;
+  color: #9758a6;
   font-size: 35px;
   align-items: center;
   text-align: center;
-  span {
-    color: #9758a6;
-    font-family: "Flavors", cursive;
-  }
+ 
 `;
 export const Form = styled.form`
   display: flex;

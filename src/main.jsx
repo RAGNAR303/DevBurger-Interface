@@ -1,13 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Login } from './containers/login'
-import GlobalStyles from './styles/globalStyles'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { router } from './router/index';
+import GlobalStyles from './styles/globalStyles';
+import { ToastContainer, Zoom } from 'react-toastify';
+import { RouterProvider } from 'react-router-dom';
 
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Login />
-    <GlobalStyles/>
+    <RouterProvider router={router} />
+    <GlobalStyles />
+    <ToastContainer
+      autoClose={3000}
+      theme="dark"
+      position="bottom-center"
+      transition={Zoom}
+    />
   </React.StrictMode>,
-)
+);

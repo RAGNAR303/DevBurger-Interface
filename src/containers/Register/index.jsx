@@ -14,17 +14,22 @@ import {
 import Logo from '../../assets/Logo.svg';
 import { Button } from '../../components/Button';
 
-export function Login() {
+
+export function Register() {
   const schema = yup
     .object({
+      name: yup.string().required('* O nome é Obrigatório'),
       email: yup
         .string()
         .email('* Digite um e-mail válido')
-        .required(' * Digite seu e-mail para continuar'),
+        .required('* Digite seu e-mail para continuar'),
       password: yup
         .string()
         .min(8, '* A senha deve ter no minimo 8 caracteres')
         .required('* Digite sua SENHA para continuar'),
+      confirmPassword: yup
+        .string()
+        .oneOf([yup.ref('password')], '* As senhas devem ser iguais').required('* Confirma sua senha'),
     })
     .required();
 
@@ -37,14 +42,15 @@ export function Login() {
   });
   const onSubmit = async (data) => {
     const response = await toast.promise(
-      api.post('/session', {
+      api.post('users', {
+        name: data.name,
         email: data.email,
         password: data.password,
       }),
       {
         pending: 'Verificando seu dados 🕣',
-        success: 'Seja Bem-vindo(a) ✅',
-        error: 'Email ou Senha Incorretos ⛔',
+        success: 'Usuarios(a) cadastrado com sucesso ✅',
+        error: 'Ops, algo deu errado! Tente novamente. ⛔',
       },
     );
 
@@ -58,10 +64,18 @@ export function Login() {
       </LeftContainer>
       <RightContainer>
         <Title>
-          Olá, seja bem vindo ao <span>Dev Burger!!</span>
-          <br /> Acesse com seu <span>Login e senha.</span>
+          Criar Cadastro
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
+          <InputContainer>
+            <label>Nome:</label>
+            <input
+              placeholder="Coloque seu nome"
+              type="nome"
+              {...register('name')}
+            />{' '}
+            <p>{errors?.name?.message}</p>
+          </InputContainer>
           <InputContainer>
             <label>Email:</label>
             <input
@@ -80,12 +94,21 @@ export function Login() {
             />
             <p>{errors?.password?.message}</p>
           </InputContainer>
+          <InputContainer>
+            <label>Confirme a Senha:</label>
+            <input
+              placeholder="************"
+              type="password"
+              {...register('confirmPassword')}
+            />
+            <p>{errors?.confirmPassword?.message}</p>
+          </InputContainer>
           <Button $red="red" type="submit">
-            Entrar
+            Cadastrar
           </Button>
         </Form>
         <p>
-          Não possui conta? <a href="">Clique aqui.</a>
+          Já tem conta? <a href="">Clique aqui.</a>
         </p>
       </RightContainer>
     </Container>
