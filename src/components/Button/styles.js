@@ -15,9 +15,12 @@ export const ContainerButton = styled.button`
 
   &:hover {
     scale: calc(1.03);
-    opacity: 0.9;
+    background: linear-gradient(180deg,rgb(116, 68, 128),rgb(79, 38, 88))
   }
   &:active {
-    background-color: #9758a6;
+    background: linear-gradient(180deg,rgb(116, 68, 128),rgb(79, 38, 88));
+    border: 2px solid #ffffff;
+
+    
   }
 `;

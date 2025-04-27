@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import BackgraoundLogin from '../../assets/backlogin.svg';
 import BackgraoundSession from '../../assets/fundoB.png';
+import { Link as ReactLink } from 'react-router-dom';
+
 
 export const Container = styled.div`
   height: 100vh;
@@ -19,6 +21,10 @@ export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* img{
+    im-shadow: 10px 10px 10px #000000;
+  } */
 `;
 export const RightContainer = styled.div`
   background: url('${BackgraoundSession}');
@@ -46,12 +52,11 @@ export const RightContainer = styled.div`
   }
 `;
 export const Title = styled.h2`
-  font-family: "Flavors", cursive;
+  font-family: 'Flavors', cursive;
   color: #9758a6;
   font-size: 35px;
   align-items: center;
   text-align: center;
- 
 `;
 export const Form = styled.form`
   display: flex;
@@ -82,10 +87,14 @@ export const InputContainer = styled.div`
     color: #fff;
   }
   p {
-    color:rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     font-size: 12px;
     font-weight: 400;
     line-height: 80%;
     height: 10px;
   }
+`;
+export const Link = styled(ReactLink)`
+  text-decoration: none;
+  color: #fff;
 `;

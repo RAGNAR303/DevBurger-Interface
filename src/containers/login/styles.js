@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import BackgraoundLogin from '../../assets/backlogin.svg';
 import BackgraoundSession from '../../assets/fundoB.png';
+import { Link as ReactLink } from 'react-router';
+
 
 export const Container = styled.div`
   height: 100vh;
@@ -46,14 +48,14 @@ export const RightContainer = styled.div`
   }
 `;
 export const Title = styled.h2`
-  font-family: "Flavors", cursive;
+  font-family: 'Flavors', cursive;
   color: #ffffff;
   font-size: 35px;
   align-items: center;
   text-align: center;
   span {
     color: #9758a6;
-    font-family: "Flavors", cursive;
+    font-family: 'Flavors', cursive;
   }
 `;
 export const Form = styled.form`
@@ -85,10 +87,15 @@ export const InputContainer = styled.div`
     color: #fff;
   }
   p {
-    color:rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
     font-size: 12px;
     font-weight: 400;
     line-height: 80%;
     height: 10px;
   }
+`;
+
+export const Link = styled(ReactLink)`
+  text-decoration: none;
+  color: #fff;
 `;
