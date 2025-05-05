@@ -1,0 +1,90 @@
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+export const Container = styled.div`
+  background-color: rgb(28, 28, 28);
+  width: 100%;
+  height: 60px;
+
+  h3 {
+    color: #9758a6;
+    font-size: 20px;
+  }
+`;
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+`;
+export const Navigation = styled.div`
+  margin-left: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+gap: 15px;
+  div {
+    margin-left: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+`;
+export const HeaderLink = styled(Link)`
+  font-size: 18px;
+  color: ${(props) => (props.$isActive ? '  #61a120' : '  #9758a6 ')};
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 200ms;
+
+  &:hover {
+    color: #61a120;
+  }
+`;
+
+export const Options = styled.div`
+  margin-right: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+  }
+`;
+export const Profile = styled.div`
+  p {
+    font-weight: 800;
+    color: #9758a6;
+  }
+  span {
+    color: #ff8c05;
+  }
+`;
+export const Logout = styled.button`
+  color: rgb(174, 1, 1);
+  background: none;
+  border: none;
+  font-weight: 800;
+  font-size: 13px;
+  gap: 15px;
+
+  &:hover {
+    color: rgb(233, 10, 10);
+  }
+  .iconiSair:hover {
+    color: rgb(233, 10, 10);
+  }
+`;
+
+export const SignOut = styled.h1`
+  margin-left: 15px;
+`;

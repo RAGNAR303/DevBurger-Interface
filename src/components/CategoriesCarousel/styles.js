@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -33,7 +34,7 @@ export const Container = styled.div`
   }
 `;
 export const Title = styled.h2`
-  font-size: 35px;
+  font-size: 32px;
   color: #9758a6;
   font-weight: 800;
   padding-bottom: 12px;
@@ -46,23 +47,23 @@ export const Title = styled.h2`
     content: '';
     bottom: 0;
     position: absolute;
-    width: 56px;
+    width: 70px;
     height: 4px;
     background-color: #9758a6;
-    left: calc(50% - 28px);
+    left: calc(50% - 35px);
   }
 `;
 
 export const ContainerItems = styled.div`
   position: relative;
-  background: url('${(props) => props.$imageUrl}');
+  background: url('${(props) => props.$imageUrl}') no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
   padding: 20px 10px;
   width: 100%;
-  height: 250px;
+  height: 300px;
   border: 2px solid #9758a6;
   border-radius: 20px;
   cursor: grab;
@@ -72,6 +73,7 @@ export const ContainerItems = styled.div`
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   overflow: hidden;
   transition: all 0.4s;
+
   &:hover {
     scale: calc(1.03);
     font-size: 25px;
@@ -84,14 +86,19 @@ export const ContainerItems = styled.div`
     background: rgba(0, 0, 0, 0.4); /* aqui define o overlay escuro */
     z-index: 1;
   }
+`;
+export const CategoryButton = styled(Link)`
+  /* background:rgba(150, 88, 166, 0.49) ; */
+  color: rgb(255, 255, 255);
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 150px;
+  z-index: 2;
+  text-decoration: none;
 
-  p {
+  &:hover {
     color: #ff8c05;
-    padding: 5px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 800;
-    margin-top: 150px;
-    z-index: 2;
-    }
+  }
 `;

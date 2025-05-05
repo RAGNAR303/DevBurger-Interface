@@ -7,12 +7,15 @@ export const Container = styled.div`
   text-align: center;
   gap: 40px;
   padding: 20px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 30px;
+  background: linear-gradient(180deg , rgb(255, 255, 255), rgb(211, 211, 211));
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
   cursor: grab;
   align-items: center;
-  
+  position: relative;
+  border: 3px solid #61a120;
   div {
     width: 100%;
     height: 80px;
@@ -22,7 +25,6 @@ export const Container = styled.div`
     gap: 20px;
   }
   p {
-    
     font-size: 20px;
     color: #ff8c05;
     line-height: 20px;
@@ -30,7 +32,6 @@ export const Container = styled.div`
     margin: 40px 0 20px 0;
   }
   strong {
-    
     font-size: 25px;
     color: #61a120;
     font-weight: 900;

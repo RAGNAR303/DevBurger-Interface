@@ -32,12 +32,11 @@ export const Container = styled.section`
   background:
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
     url('${BackgraoundSession}');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 
-  margin-top: -20;
-  width: 100%;
   height: 100%;
+  width: 100vw;
 `;
 export const Content = styled.div`
   /* padding-bottom: 70px; */

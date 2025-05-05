@@ -37,7 +37,7 @@ export const Container = styled.div`
   }
 `;
 export const Title = styled.h2`
-  font-size: 35px;
+  font-size: 32px;
   color: #61a120;
   font-weight: 800;
   padding-bottom: 12px;
@@ -49,9 +49,9 @@ export const Title = styled.h2`
     content: '';
     bottom: 0;
     position: absolute;
-    width: 56px;
+    width: 70px;
     height: 4px;
     background-color: #61a120;
-    left: calc(50% - 28px);
+    left: calc(50% - 35px);
   }
 `;

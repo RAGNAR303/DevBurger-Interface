@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BackgraoundLogin from '../../assets/backlogin.svg';
+import Textura from '../../assets/Textura.svg'
 import BackgraoundSession from '../../assets/fundoB.png';
 import { Link as ReactLink } from 'react-router';
 
@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
 `;
 export const LeftContainer = styled.div`
-  background: url('${BackgraoundLogin}');
+  background: url('${Textura}');
   background-size: cover;
   background-position: center;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerButton = styled.button`
   width: 100%;
   border: none;
-  height: 52px;
+  height: 45px;
   border-radius: 30px;
   padding: 0 16px;
   background: linear-gradient(180deg, #9758a6, #6f357c);

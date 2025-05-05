@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import BackgraoundLogin from '../../assets/backlogin.svg';
+import Textura from '../../assets/Textura.svg';
 import BackgraoundSession from '../../assets/fundoB.png';
 import { Link as ReactLink } from 'react-router-dom';
-
 
 export const Container = styled.div`
   height: 100vh;
@@ -10,7 +9,7 @@ export const Container = styled.div`
   display: flex;
 `;
 export const LeftContainer = styled.div`
-  background: url('${BackgraoundLogin}');
+  background: url('${Textura}');
   background-size: cover;
   background-position: center;
 
@@ -76,7 +75,7 @@ export const InputContainer = styled.div`
     background: linear-gradient(180deg, #ffffff, rgb(165, 165, 165));
     width: 100%;
     border: none;
-    height: 45px;
+    height: 40px;
     border: 2px solid #9758a6;
     border-radius: 30px;
     padding: 0 16px;
