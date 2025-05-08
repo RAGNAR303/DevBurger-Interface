@@ -17,7 +17,14 @@ export const ContainerButton = styled.button`
     background: linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88));
   }
   &:active {
-    background: linear-gradient(180deg, #61a120, rgb(71, 118, 24));
-    
+    background: linear-gradient(180deg, rgb(95, 56, 105), rgb(53, 26, 59));
+  }
+
+  img {
+    width: 30px;
+
+    &:hover {
+      color: #61a120;
+    }
   }
 `;

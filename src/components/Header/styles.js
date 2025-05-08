@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 export const Container = styled.div`
-  background-color: rgb(28, 28, 28);
+  background: linear-gradient(180deg, rgb(32, 32, 32), rgb(12, 12, 12));
   width: 100%;
   height: 60px;
 
@@ -14,7 +14,6 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -25,7 +24,7 @@ export const Navigation = styled.div`
   align-items: center;
   justify-content: center;
   height: 72px;
-gap: 15px;
+  gap: 15px;
   div {
     margin-left: 56px;
     display: flex;

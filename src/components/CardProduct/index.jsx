@@ -16,6 +16,6 @@ export function CardProduct({ product }) {
   );
 }
 
-CardProduct.propType = {
+CardProduct.propTypes = {
   product: PropTypes.object,
 };

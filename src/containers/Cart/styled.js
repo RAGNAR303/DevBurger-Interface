@@ -8,8 +8,9 @@ export const Container = styled.div`
   background:
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
     url('${BackgraoundSession}');
-  background-size: contain;
   background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 
 `;
 export const Banner = styled.div`
@@ -46,7 +47,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: 1fr 20%;
+  grid-template-columns: 1fr 30%;
   width: 100%;
   max-width: 1280px;
   padding: 40px;

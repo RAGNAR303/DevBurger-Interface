@@ -1,10 +1,9 @@
-import Cart from '../../assets/Vector.svg'
+import Cart from '../../assets/Vector.svg';
 import { ContainerButton } from './styles';
-
-export function CartButton({...props}) {
+export function CartButton({ ...props }) {
   return (
     <ContainerButton {...props}>
-      <img src={Cart}  alt='carrinho-de-compras'/>
+      <img src={Cart} alt="carrinho-de-compras" />
     </ContainerButton>
   );
 }

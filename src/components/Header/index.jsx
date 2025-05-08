@@ -25,6 +25,7 @@ export function Header() {
   const navigate = useNavigate();
   const { pathname } = useResolvedPath();
   const { logout, userInfo } = useUser();
+  console.log(userInfo)
   function logoutUser() {
     logout();
     navigate('/login');
@@ -71,14 +72,10 @@ export function Header() {
             <UserCircle color=" #9758a6" weight="bold" size={24} />
             <div>
               <p>
-                Olá ,<span>{userInfo.name}</span>
+                Olá ,<span>{userInfo.name?.charAt(0).toUpperCase() +  userInfo.name?.slice(1)}</span>
               </p>
               <Logout onClick={logoutUser}>Sair</Logout>
-              <SignOut
-                color=" rgb(174, 1, 1)"
-                weight="bold"
-                size={18}
-              />
+              <SignOut color=" rgb(174, 1, 1)" weight="bold" size={18} />
             </div>
             <h3>|</h3>
           </Profile>
@@ -91,7 +88,7 @@ export function Header() {
               cursor: 'pointer',
             }}
           /> */}
-          <HeaderLink to={'/carrinho'}>Carrinho</HeaderLink>
+          <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>Carrinho</HeaderLink>
         </Options>
       </Content>
     </Container>
