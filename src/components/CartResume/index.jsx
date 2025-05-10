@@ -22,35 +22,31 @@ export function CartResume() {
 
   const submitOrder = async () => {
     const products = cartProducts.map((products) => {
-      return { id: products.id, quantity: products.quantity };
+      return {
+        id: products.id,
+        quantity: products.quantity,
+        price: products.price,
+      };
     });
+
     try {
-      const { status } = await api.post(
-        '/orders',
-        {
-          user: {
-            name: userInfo.name,
-          },
-          products
-        },
-        {
-          validateStatus: () => true,
-        },
-      );
-      if (status === 200 || status === 201) {
-        setTimeout(() => {
-          navigate('/');
-        }, 2000);
-        toast.success('Pedido realizado com sucesso! ✅');
-      } else if (status === 409) {
-        toast.success('Falha em realizar seu pedido ⛔ !');
-      } else {
-        throw new Error();
-      }
-      console.log(status);
-    } catch (error) {
-      toast.error(' Falha no sistema! Tente novamente!❌ ');
+      const {data} = await api.post('/create-payment-intent', { products });
+      navigate('/checkout', {
+        state: data,
+      });
+    } catch (err) {
+      toast.error('Erro , tente novamente!', {
+        position: 'bottom-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
     }
+
   };
   return (
     <div>

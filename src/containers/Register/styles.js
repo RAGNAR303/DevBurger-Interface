@@ -60,7 +60,7 @@ export const Title = styled.h2`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   padding: 20px;
   width: 100%;
   max-width: 400px;

@@ -44,16 +44,19 @@ export const DeleteProduct = styled.button`
   border: none;
   margin-right: 30px;
   transition: all 0.5s;
-  &:hover{
-    scale: calc(1.08)
+  &:hover {
+    scale: calc(1.08);
   }
 `;
 
-export const EmptyCart = styled.tr`
+export const EmptyCart = styled.div`
   height: 100%;
-  font-size: 50px;
-  text-align: center;
-  font-weight: bold;
+
+  span {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
 `;
 
 export const ProductTotalPrice = styled.div`

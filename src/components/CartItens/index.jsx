@@ -1,8 +1,9 @@
 import { Table } from '../index';
 import { useCart } from '../../hooks/CartContext';
 import Trash from '../../assets/trash.svg';
-// import { Trash } from '@phosphor-icons/react';
+import { Button } from '../index';
 import { formatPrice } from '../../utils/formatPrice';
+import { useNavigate } from 'react-router-dom';
 import {
   ButtonGroup,
   DeleteProduct,
@@ -13,7 +14,7 @@ import {
 export function CartItens() {
   const { cartProducts, increseProduct, decreseProduct, deleteProduct } =
     useCart();
-
+  const navigate = useNavigate();
   console.log(cartProducts);
   return (
     <Table.Root>
@@ -58,10 +59,28 @@ export function CartItens() {
         ) : (
           <Table.Tr>
             <Table.Td colSpan={7}>
-              <EmptyCart>Não há itens no carrinho</EmptyCart>
+              <EmptyCart>
+                <span>Não há itens no carrinho</span>
+              </EmptyCart>
             </Table.Td>
           </Table.Tr>
         )}
+        <Table.Tr>
+          <Table.Td colSpan={7}>
+            <Table.Footer >
+              <Button
+                onClick={() => navigate('/cardapio')}
+                style={{
+                  height: 40,
+                  width: 230,
+                  fontSize: 18,
+                }}
+              >
+                Adicinar mais produts
+              </Button>
+            </Table.Footer>
+          </Table.Td>
+        </Table.Tr>
       </Table.Body>
     </Table.Root>
   );

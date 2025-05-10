@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-content: center;
   margin-bottom: 20px;
   text-align: center;
+  max-width: 300px;
   * {
     font-weight: 900;
     color: rgb(37, 37, 37);
@@ -34,6 +35,7 @@ export const Container = styled.div`
     color: #ff8c05;
     padding: 14px;
     border-bottom: 2px solid #ff8c05;
+    
     font-weight: 200;
     font-size: 20px;
   }

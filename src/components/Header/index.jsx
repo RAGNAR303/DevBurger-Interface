@@ -19,13 +19,15 @@ import {
   CookingPot,
   SignOut,
 } from '@phosphor-icons/react';
+// import { QuantityCartNum } from '../../utils/QuantityCart';
 
 export function Header() {
   const [hovered, setHovered] = useState(false);
   const navigate = useNavigate();
   const { pathname } = useResolvedPath();
   const { logout, userInfo } = useUser();
-  console.log(userInfo)
+  //
+
   function logoutUser() {
     logout();
     navigate('/login');
@@ -72,14 +74,18 @@ export function Header() {
             <UserCircle color=" #9758a6" weight="bold" size={24} />
             <div>
               <p>
-                Olá ,<span>{userInfo.name?.charAt(0).toUpperCase() +  userInfo.name?.slice(1)}</span>
+                Olá ,
+                <span>
+                  {userInfo.name?.charAt(0).toUpperCase() +
+                    userInfo.name?.slice(1)}
+                </span>
               </p>
               <Logout onClick={logoutUser}>Sair</Logout>
               <SignOut color=" rgb(174, 1, 1)" weight="bold" size={18} />
             </div>
             <h3>|</h3>
           </Profile>
-          {/* <Basket
+          <Basket
             color=" #9758a6"
             weight="bold"
             size={24}
@@ -87,8 +93,10 @@ export function Header() {
               transition: 'color 0.3s',
               cursor: 'pointer',
             }}
-          /> */}
-          <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>Carrinho</HeaderLink>
+          />
+          <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
+            Carrinho
+          </HeaderLink>
         </Options>
       </Content>
     </Container>
