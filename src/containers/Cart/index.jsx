@@ -2,6 +2,7 @@ import Logo from '../../assets/Logo.svg';
 import { CartItens, CartResume } from '../../components';
 import { Banner, Container, Content, Title } from './styled';
 
+
 export function Cart() {
   return (
     <Container>

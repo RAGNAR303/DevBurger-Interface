@@ -76,8 +76,18 @@ export function Header() {
               <p>
                 Olá ,
                 <span>
-                  {userInfo.name?.charAt(0).toUpperCase() +
-                    userInfo.name?.slice(1)}
+                  {/* {' '}
+                  {userInfo?.length === userInfo?.name (
+                    userInfo.map(
+                      (user) =>
+                        user.name?.charAt(0).toUpperCase() +
+                        user.name?.slice(1),
+                    )
+                  ) : (
+                    <p>Fazer Login</p>
+                  )} */}
+                  {  userInfo.name?.charAt(0).toUpperCase() +
+                    userInfo.name?.slice(1) }
                 </span>
               </p>
               <Logout onClick={logoutUser}>Sair</Logout>

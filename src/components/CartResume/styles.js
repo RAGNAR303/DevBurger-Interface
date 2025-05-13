@@ -25,17 +25,16 @@ export const Container = styled.div`
       'title title'
       'item itens-price'
       'delivery delivery-price';
-    border-bottom: 2px solid #ff8c05;
-    
+    border-bottom: 2px solid ${(props) => props.theme.orange};
   }
   .title {
     grid-area: title;
     background: linear-gradient(180deg, rgb(32, 32, 32), rgb(12, 12, 12));
     border-radius: 20px 20px 0 0;
-    color: #ff8c05;
+    color: ${(props) => props.theme.orange};
     padding: 14px;
-    border-bottom: 2px solid #ff8c05;
-    
+    border-bottom: 2px solid ${(props) => props.theme.orange};
+
     font-weight: 200;
     font-size: 20px;
   }

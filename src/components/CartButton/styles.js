@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerButton = styled.button`
-  background: linear-gradient(180deg, #9758a6, #6f357c);
+  background: ${(props) => props.theme.purpleBackgroundlinear};
   width: 100%;
   height: 52px;
   border: 0;
@@ -24,7 +24,7 @@ export const ContainerButton = styled.button`
     width: 30px;
 
     &:hover {
-      color: #61a120;
+      color: ${(props) => props.theme.green};
     }
   }
 `;

@@ -10,12 +10,12 @@ export const ButtonGroup = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #ff8c05;
+  color: ${(props) => props.theme.orange};
   font-weight: 800;
 
   button {
     color: #fff;
-    background: linear-gradient(180deg, #9758a6, #6f357c);
+    background: ${(props) => props.theme.purpleBackgroundlinear};
     width: 100%;
     height: 100%;
     border: 0;
@@ -61,5 +61,5 @@ export const EmptyCart = styled.div`
 
 export const ProductTotalPrice = styled.div`
   font-weight: 900;
-  color: #61a120;
+  color: ${(props) => props.theme.green};
 `;

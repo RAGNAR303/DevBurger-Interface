@@ -41,18 +41,18 @@ export const RightContainer = styled.div`
   max-width: 50%;
 
   p {
-    color: #ffffff;
+    color: ${(props) => props.theme.white};
     font-size: 18px;
     font-weight: 800;
     a {
-      color: #9758a6;
+      color: ${(props) => props.theme.purple};
       text-decoration: underline;
     }
   }
 `;
 export const Title = styled.h2`
   font-family: 'Flavors', cursive;
-  color: #9758a6;
+  color: ${(props) => props.theme.purple};
   font-size: 35px;
   align-items: center;
   text-align: center;
@@ -76,7 +76,7 @@ export const InputContainer = styled.div`
     width: 100%;
     border: none;
     height: 40px;
-    border: 2px solid #9758a6;
+    border: 2px solid ${(props) => props.theme.purple};
     border-radius: 30px;
     padding: 0 16px;
   }

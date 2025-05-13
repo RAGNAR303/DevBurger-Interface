@@ -8,11 +8,11 @@ export const Container = styled.div`
   .react-multi-carousel-list {
     overflow: visible;
   }
-  
+
   padding-bottom: 40px;
 
   .react-multiple-carousel__arrow {
-    background: linear-gradient(180deg, #9758a6, #6f357c);
+    background: ${(props) => props.theme.purpleBackgroundlinear};
     border-radius: 50%;
     z-index: 1000;
     top: 10px;
@@ -31,14 +31,14 @@ export const Container = styled.div`
   }
 
   .react-multiple-carousel__arrow::before {
-    color: #61a120;
+    color: ${(props) => props.theme.green};
     font-size: 30px;
     font-weight: 1000;
   }
 `;
 export const Title = styled.h2`
   font-size: 32px;
-  color: #61a120;
+  color: ${(props) => props.theme.green};
   font-weight: 800;
   padding-bottom: 12px;
   position: relative;
@@ -51,7 +51,7 @@ export const Title = styled.h2`
     position: absolute;
     width: 70px;
     height: 4px;
-    background-color: #61a120;
+    background-color: ${(props) => props.theme.green};
     left: calc(50% - 35px);
   }
 `;

@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import Textura from '../../assets/Textura.svg';
 import BackgraoundSession from '../../assets/fundoB.png';
+
+
 export const Container = styled.div`
+
   width: 100%;
   min-height: 100vh;
   background: url('${BackgraoundSession}');
@@ -30,9 +33,10 @@ export const Title = styled.div`
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  color:${(props) => props.theme.green};
+  color: ${(props) => props.theme.green};
   padding-bottom: 12px;
   position: relative;
+
   &::after {
     bottom: 0;
     position: absolute;
@@ -45,8 +49,8 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 30%;
+  display: flex;
+  align-content: center;
   width: 100%;
   max-width: 1280px;
   padding: 40px;

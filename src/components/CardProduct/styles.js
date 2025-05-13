@@ -8,7 +8,7 @@ export const Container = styled.div`
   gap: 40px;
   padding: 20px;
   border-radius: 30px;
-  background: linear-gradient(180deg , rgb(255, 255, 255), rgb(211, 211, 211));
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgb(211, 211, 211));
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -26,14 +26,14 @@ export const Container = styled.div`
   }
   p {
     font-size: 20px;
-    color: #ff8c05;
+    color: ${(props) => props.theme.orange};
     line-height: 20px;
     font-weight: 700;
     margin: 40px 0 20px 0;
   }
   strong {
     font-size: 25px;
-    color: #61a120;
+    color: ${(props) => props.theme.green};
     font-weight: 900;
     line-height: 20px;
   }

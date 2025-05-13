@@ -9,3 +9,5 @@ export * from './Table';
 export * from './CartItens';
 export * from './CartResume';
 export * from './Stripe/CheckoutForm';
+export * from './SideNavAdmin';
+export * from './SideNavAdmin/navLinks';

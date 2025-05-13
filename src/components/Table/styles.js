@@ -19,8 +19,8 @@ export const Th = styled.th`
   font-size: 20px;
   padding: 16px;
   text-align: center;
-  color: #ff8c05;
-  border-bottom: 2px solid #ff8c05;
+  color: ${(props) => props.theme.orange};
+  border-bottom: 2px solid ${(props) => props.theme.orange};
 
   border-top-right-radius: 20px;
 
@@ -39,6 +39,6 @@ export const Body = styled.tbody`
 export const Footer = styled.tfoot`
   border-radius: 0 0 20px 20px;
   display: flex;
-  
+
   justify-content: center;
 `;

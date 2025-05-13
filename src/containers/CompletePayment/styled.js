@@ -30,7 +30,7 @@ export const Title = styled.div`
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  color:${(props) => props.theme.green};
+  color: ${(props) => props.theme.green};
   padding-bottom: 12px;
   position: relative;
   &::after {
@@ -39,14 +39,14 @@ export const Title = styled.div`
     content: '';
     height: 4px;
     width: 70px;
-    background-color:${(props) => props.theme.green};
+    background-color: ${(props) => props.theme.green};
     left: calc(50% - 35px);
   }
 `;
 
 export const Content = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 30%;
+  display: flex;
+  align-content: center;
   width: 100%;
   max-width: 1280px;
   padding: 40px;

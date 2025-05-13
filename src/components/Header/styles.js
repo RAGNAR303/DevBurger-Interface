@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 60px;
 
   h3 {
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
     font-size: 20px;
   }
 `;
@@ -41,7 +41,7 @@ export const HeaderLink = styled(Link)`
   transition: color 200ms;
 
   &:hover {
-    color: #61a120;
+    color:${(props) => props.theme.green};
   }
 `;
 
@@ -62,10 +62,10 @@ export const Options = styled.div`
 export const Profile = styled.div`
   p {
     font-weight: 800;
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
   }
   span {
-    color: #ff8c05;
+    color: ${(props) => props.theme.orange};
   }
 `;
 export const Logout = styled.button`

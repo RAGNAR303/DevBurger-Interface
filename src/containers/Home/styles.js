@@ -10,7 +10,7 @@ export const Banner = styled.div`
   display: flex;
 
   h1 {
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
     font-family: 'Flavors', cursive;
     font-size: 100px;
     position: absolute;

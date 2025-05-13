@@ -10,7 +10,7 @@ export const Container = styled.div`
   }
 
   .react-multiple-carousel__arrow {
-    background: linear-gradient(180deg, #9758a6, #6f357c);
+    background: ${(props) => props.theme.purpleBackgroundlinear};
     border-radius: 50%;
     z-index: 1000;
   }
@@ -28,20 +28,20 @@ export const Container = styled.div`
   }
 
   .react-multiple-carousel__arrow::before {
-    color: #61a120;
+    color: ${(props) => props.theme.green};
     font-size: 30px;
     font-weight: 1000;
   }
 `;
 export const Title = styled.h2`
   font-size: 32px;
-  color: #9758a6;
+  color: ${(props) => props.theme.purple};
   font-weight: 800;
   padding-bottom: 12px;
   position: relative;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
+
+  margin: 30px auto;
 
   &::after {
     content: '';
@@ -49,7 +49,7 @@ export const Title = styled.h2`
     position: absolute;
     width: 70px;
     height: 4px;
-    background-color: #9758a6;
+    background-color: ${(props) => props.theme.purple};
     left: calc(50% - 35px);
   }
 `;
@@ -63,8 +63,8 @@ export const ContainerItems = styled.div`
   align-items: center;
   padding: 20px 10px;
   width: 100%;
-  height: 300px;
-  border: 2px solid #9758a6;
+  height: 250px;
+  border: 2px solid ${(props) => props.theme.purple};
   border-radius: 20px;
   cursor: grab;
   margin: 30px;
@@ -99,6 +99,6 @@ export const CategoryButton = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: #ff8c05;
+    color: ${(props) => props.theme.orange};
   }
 `;

@@ -26,7 +26,7 @@ export const Banner = styled.div`
   h1 {
     font-size: 80px;
     font-family: 'Flavors', cursive;
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
     line-height: 65px;
     position: absolute;
     right: 20%;
@@ -35,7 +35,7 @@ export const Banner = styled.div`
   span {
     display: block;
     /* font-family: 'Flavors', cursive; */
-    color: #ffffff;
+    color: ${(props) => props.theme.white};
     font-size: 25px;
     font-weight: 900;
   }
@@ -43,14 +43,14 @@ export const Banner = styled.div`
 export const CategoryMenu = styled.div`
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 25px;
   margin: 50px 0;
 `;
 
 export const CategoryButton = styled(Link)`
   text-decoration: none;
   cursor: pointer;
-  color: #ff8c05;
+  color: ${(props) => props.theme.orange};
   font-size: 24px;
   height: 52px;
   font-weight: 900;
@@ -58,20 +58,20 @@ export const CategoryButton = styled(Link)`
   padding: 10px 20px;
   line-height: 20px;
   border: none;
-  border-bottom: ${(props) => props.$isActiveCategory && '5px solid  #ff8c05 '};
+  border-bottom: ${(props) => props.$isActiveCategory && `5px solid   #ff8c05`};
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  background: linear-gradient(180deg, #9758a6, #6f357c);
+  background: ${(props) => props.theme.purpleBackgroundlinear};
   background: ${(props) =>
     props.$isActiveCategory
-      ? 'linear-gradient(180deg,  #61a120,rgb(71, 118, 24))'
-      : 'linear-gradient(180deg, #9758a6, #6f357c)'};
-      transition: 0.5s ease-in-out;
+      ? 'linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88))'
+      : `${(props) => props.theme.purpleBackgroundlinear}`};
+  transition: 0.5s ease-in-out;
 
-      &:hover{
-        scale: calc(1.07);
-      }
+  &:hover {
+    scale: calc(1.07);
+  }
 `;
 
 export const ProductsContainer = styled.div`
@@ -87,7 +87,7 @@ export const ProductsContainer = styled.div`
 export const ReturnButton = styled(Link)`
   text-decoration: none;
   cursor: pointer;
-  color: #ff8c05;
+  color: ${(props) => props.theme.orange};
   font-size: 24px;
   height: 52px;
   font-weight: 900;
@@ -98,11 +98,11 @@ export const ReturnButton = styled(Link)`
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  background: linear-gradient(180deg, #9758a6, #6f357c);
+  background: ${(props) => props.theme.purpleBackgroundlinear};
   transition: 0.5s ease-in-out;
   &:hover {
     scale: calc(1.07);
-    border-bottom: 5px solid #ff8c05;
+    border-bottom: 5px solid ${(props) => props.theme.orange};
     background: linear-gradient(180deg, #61a120, rgb(71, 118, 24));
   }
 `;

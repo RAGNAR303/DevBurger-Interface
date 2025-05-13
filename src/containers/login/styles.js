@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import Textura from '../../assets/Textura.svg'
+import Textura from '../../assets/Textura.svg';
 import BackgraoundSession from '../../assets/fundoB.png';
 import { Link as ReactLink } from 'react-router';
-
 
 export const Container = styled.div`
   height: 100vh;
@@ -38,23 +37,23 @@ export const RightContainer = styled.div`
   max-width: 50%;
 
   p {
-    color: #ffffff;
+    color: ${(props) => props.theme.white};
     font-size: 18px;
     font-weight: 800;
     a {
-      color: #9758a6;
+      color: ${(props) => props.theme.purple};
       text-decoration: underline;
     }
   }
 `;
 export const Title = styled.h2`
   font-family: 'Flavors', cursive;
-  color: #ffffff;
+  color: ${(props) => props.theme.white};
   font-size: 35px;
   align-items: center;
   text-align: center;
   span {
-    color: #9758a6;
+    color: ${(props) => props.theme.purple};
     font-family: 'Flavors', cursive;
   }
 `;
@@ -77,7 +76,7 @@ export const InputContainer = styled.div`
     width: 100%;
     border: none;
     height: 45px;
-    border: 2px solid #9758a6;
+    border: 2px solid ${(props) => props.theme.purple};
     border-radius: 30px;
     padding: 0 16px;
   }
