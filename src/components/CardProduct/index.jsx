@@ -8,12 +8,14 @@ export function CardProduct({ product }) {
   return (
     <Container>
       <CardImage src={product.url} alt={product.name} />
-      <dir>
+      <div>
         <p>{product.name}</p>
         <strong>{product.currencyValue}</strong>
-      </dir>
-      <CartButton onClick={() => putProductInCart(product)}></CartButton>
-      {/* <Button>Carrinho</Button> */}
+      </div>
+      <section>
+        <CartButton onClick={() => putProductInCart(product)}></CartButton>
+        {/* <CartButton onClick={() => putProductInCart(product)}>Carrinho</CartButton> */}
+    </section>
     </Container>
   );
 }

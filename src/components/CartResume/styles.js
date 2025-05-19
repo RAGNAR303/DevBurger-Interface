@@ -13,6 +13,7 @@ export const Container = styled.div`
   margin-bottom: 20px;
   text-align: center;
   max-width: 300px;
+  width: 100%;
   * {
     font-weight: 900;
     color: rgb(37, 37, 37);

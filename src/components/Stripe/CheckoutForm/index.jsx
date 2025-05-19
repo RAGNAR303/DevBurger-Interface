@@ -35,8 +35,8 @@ export default function CheckoutForm() {
       elements,
       redirect: 'if_required',
     });
-    console.log(error);
-    console.log(paymentIntent);
+    // console.log(error);
+    // console.log(paymentIntent);
     if (error) {
       setMessage(error.message);
       toast.success(error.message);

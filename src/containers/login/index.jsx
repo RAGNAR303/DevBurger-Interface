@@ -57,7 +57,7 @@ export function Login() {
                 navigate('/');
               }
 
-              console.log(userData);
+             
             }, 2000);
             return 'Seja Bem-vindo(a) ✅';
           },

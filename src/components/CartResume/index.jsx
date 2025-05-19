@@ -30,7 +30,7 @@ export function CartResume() {
     });
 
     try {
-      const {data} = await api.post('/create-payment-intent', { products });
+      const { data } = await api.post('/create-payment-intent', { products });
       navigate('/checkout', {
         state: data,
       });
@@ -46,7 +46,6 @@ export function CartResume() {
         theme: 'dark',
       });
     }
-
   };
   return (
     <div>
@@ -65,7 +64,9 @@ export function CartResume() {
           </p>
         </div>
       </Container>
-      <Button onClick={submitOrder}>Finalizar Pedido</Button>
+      <Button style={{ width: 300 }} onClick={submitOrder}>
+        Finalizar Pedido
+      </Button>
     </div>
   );
 }

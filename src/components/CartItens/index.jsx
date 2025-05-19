@@ -15,7 +15,7 @@ export function CartItens() {
   const { cartProducts, increseProduct, decreseProduct, deleteProduct } =
     useCart();
   const navigate = useNavigate();
-  console.log(cartProducts);
+  // console.log(cartProducts);
   return (
     <Table.Root>
       <Table.Header>

@@ -8,6 +8,7 @@ import {
   HeaderLink,
   Logout,
   Navigation,
+  NavLink,
   Options,
   Profile,
 } from './styles';
@@ -19,13 +20,16 @@ import {
   CookingPot,
   SignOut,
 } from '@phosphor-icons/react';
+import { formatName } from '../../utils/formatName';
 // import { QuantityCartNum } from '../../utils/QuantityCart';
 
 export function Header() {
-  const [hovered, setHovered] = useState(false);
   const navigate = useNavigate();
   const { pathname } = useResolvedPath();
   const { logout, userInfo } = useUser();
+  const { admin: isAdmin } = JSON.parse(
+    localStorage.getItem('devburger:userData'),
+  );
   //
 
   function logoutUser() {
@@ -36,77 +40,45 @@ export function Header() {
     <Container>
       <Content>
         <Navigation>
-          {/* <House
-            color={(props) => (props.$isActive ? '  #61a120' : '  #9758a6 ')}
-            weight="bold"
-            size={24}
-            $isActive={pathname === '/'}
-            path={pathname ? '/' : '/cardapio'}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            style={{
-              cursor: 'pointer',
-              color: hovered ? ' #61a120' : '#9758a6',
-            }}
-          /> */}
-          <HeaderLink to={'/'} $isActive={pathname === '/'}>
-            Home
-          </HeaderLink>
+          <NavLink to={'/'} $isActive={pathname === '/'}>
+            <House weight="duotone" size={24} />
+            <HeaderLink to={'/'} $isActive={pathname === '/'}>
+              Home
+            </HeaderLink>
+          </NavLink>
           <h3>|</h3>
-          {/* <CookingPot
-            // color="  #9758a6"
-            weight="bold"
-            size={24}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            path={pathname ? '/cardapio' : '/'}
-            style={{
-              cursor: 'pointer',
-              color: hovered ? '#9758a6' : ' #61a120',
-            }}
-          /> */}
-          <HeaderLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
-            Cardápio
-          </HeaderLink>
+          <NavLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
+            <CookingPot weight="duotone" size={24} />
+            <HeaderLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
+              Cardápio
+            </HeaderLink>
+          </NavLink>
         </Navigation>
         <Options>
           <Profile>
-            <UserCircle color=" #9758a6" weight="bold" size={24} />
+            {isAdmin ? (
+              <UserCircleGear weight="duotone" onClick={() => navigate('/admin/produtos')} />
+            ) : (
+              <UserCircle color=" #9758a6" weight="bold" size={24} />
+            )}
+
             <div>
               <p>
-                Olá ,
-                <span>
-                  {/* {' '}
-                  {userInfo?.length === userInfo?.name (
-                    userInfo.map(
-                      (user) =>
-                        user.name?.charAt(0).toUpperCase() +
-                        user.name?.slice(1),
-                    )
-                  ) : (
-                    <p>Fazer Login</p>
-                  )} */}
-                  {  userInfo.name?.charAt(0).toUpperCase() +
-                    userInfo.name?.slice(1) }
-                </span>
+                Olá ,<span>{formatName(userInfo.name) || 'Fazer Login'}</span>
               </p>
-              <Logout onClick={logoutUser}>Sair</Logout>
-              <SignOut color=" rgb(174, 1, 1)" weight="bold" size={18} />
+              <Logout onClick={logoutUser}>
+                Sair
+                <SignOut  weight="bold" size={18} />
+              </Logout>
             </div>
             <h3>|</h3>
           </Profile>
-          <Basket
-            color=" #9758a6"
-            weight="bold"
-            size={24}
-            style={{
-              transition: 'color 0.3s',
-              cursor: 'pointer',
-            }}
-          />
-          <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
-            Carrinho
-          </HeaderLink>
+          <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
+            <Basket weight="duotone" size={24} />
+            <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
+              Carrinho
+            </HeaderLink>
+          </NavLink>
         </Options>
       </Content>
     </Container>

@@ -23,6 +23,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
+    margin-bottom: 30px;
   }
   p {
     font-size: 20px;
@@ -36,6 +37,11 @@ export const Container = styled.div`
     color: ${(props) => props.theme.green};
     font-weight: 900;
     line-height: 20px;
+  }
+  section{
+    display: flex;
+    width: 100%;
+    gap: 10px
   }
 `;
 

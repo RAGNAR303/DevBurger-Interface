@@ -20,10 +20,6 @@ export const LeftContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* img{
-    im-shadow: 10px 10px 10px #000000;
-  } */
 `;
 export const RightContainer = styled.div`
   background: url('${BackgraoundSession}');
@@ -72,7 +68,7 @@ export const InputContainer = styled.div`
   width: 100%;
 
   input {
-    background: linear-gradient(180deg, #ffffff, rgb(165, 165, 165));
+    background: ${(props) => props.theme.whiteBackgroundlinear};
     width: 100%;
     border: none;
     height: 40px;

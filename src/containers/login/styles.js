@@ -72,7 +72,7 @@ export const InputContainer = styled.div`
   width: 100%;
 
   input {
-    background: linear-gradient(180deg, #ffffff, rgb(165, 165, 165));
+    background: ${(props) => props.theme.whiteBackgroundlinear};
     width: 100%;
     border: none;
     height: 45px;
