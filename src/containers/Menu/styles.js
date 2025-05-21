@@ -16,7 +16,7 @@ export const Banner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 480px;
+  height: 370px;
   background: url('${HamburguerMenu}') no-repeat;
   background-color: #1f1f1f;
   background-position: center;
@@ -29,15 +29,15 @@ export const Banner = styled.div`
     color: ${(props) => props.theme.purple};
     line-height: 65px;
     position: absolute;
-    right: 20%;
-    top: 30%;
+    right: 10%;
+    top: 20%;
   }
   span {
     display: block;
-    /* font-family: 'Flavors', cursive; */
+    font-family: 'Flavors', cursive;
     color: ${(props) => props.theme.white};
-    font-size: 25px;
-    font-weight: 900;
+    font-size: 30px;
+    font-weight: 400;
   }
 `;
 export const CategoryMenu = styled.div`

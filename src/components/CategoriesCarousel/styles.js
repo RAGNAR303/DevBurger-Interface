@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 10px;
-  padding-bottom: 40px;
-
-  .carousel-Itens {
+  margin: 20px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  .carousel-itens {
     padding-right: 40px;
+    box-sizing: border-box;
   }
+  
 
   .react-multiple-carousel__arrow {
     background: ${(props) => props.theme.purpleBackgroundlinear};
@@ -20,11 +23,11 @@ export const Container = styled.div`
   }
 
   .react-multiple-carousel__arrow--left {
-    left: 20px;
+    left: calc(3% + 1px);
   }
 
   .react-multiple-carousel__arrow--right {
-    right: 20px;
+    right: calc(2% + 1px);
   }
 
   .react-multiple-carousel__arrow::before {
@@ -40,8 +43,7 @@ export const Title = styled.h2`
   padding-bottom: 12px;
   position: relative;
   text-align: center;
-
-  margin: 30px auto;
+  margin-top: 50px;
 
   &::after {
     content: '';
@@ -55,7 +57,7 @@ export const Title = styled.h2`
 `;
 
 export const ContainerItems = styled.div`
-  position: relative;
+  /* position: relative; */
   background: url('${(props) => props.$imageUrl}') no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,7 +74,7 @@ export const ContainerItems = styled.div`
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   overflow: hidden;
-  transition: all 0.4s;
+  transition: all 0.7s;
 
   &:hover {
     scale: calc(1.03);
@@ -88,8 +90,8 @@ export const ContainerItems = styled.div`
   }
 `;
 export const CategoryButton = styled(Link)`
-  /* background:rgba(150, 88, 166, 0.49) ; */
-  color: rgb(255, 255, 255);
+  color:  ${(props) => props.theme.purple} ;
+  text-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.72) ;
   padding: 5px 20px;
   border-radius: 10px;
   font-size: 30px;
@@ -97,6 +99,7 @@ export const CategoryButton = styled(Link)`
   margin-top: 150px;
   z-index: 2;
   text-decoration: none;
+  transition: all 0.7s;
 
   &:hover {
     color: ${(props) => props.theme.orange};

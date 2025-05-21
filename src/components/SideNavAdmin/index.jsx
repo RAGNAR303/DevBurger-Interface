@@ -10,7 +10,7 @@ export function SideNavAdmin() {
   const { logout } = useUser();
   const { pathname } = useResolvedPath();
 
-  // console.log(pathname);
+
   return (
     <Container>
       <img src={Logo} alt="logo-devburger" />

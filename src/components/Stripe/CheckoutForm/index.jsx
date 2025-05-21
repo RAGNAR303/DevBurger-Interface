@@ -35,8 +35,7 @@ export default function CheckoutForm() {
       elements,
       redirect: 'if_required',
     });
-    // console.log(error);
-    // console.log(paymentIntent);
+  
     if (error) {
       setMessage(error.message);
       toast.success(error.message);
@@ -57,7 +56,7 @@ export default function CheckoutForm() {
           },
         );
         if (status === 200 || status === 201) {
-          console.log(status);
+        
           setTimeout(() => {
             navigate(
               `/complete?payment_intent_client_secret=${paymentIntent.client_secret}`,
@@ -71,7 +70,7 @@ export default function CheckoutForm() {
         } else {
           throw new Error();
         }
-        console.log(status);
+        
       } catch (error) {
         toast.error(' Falha no sistema! Tente novamente!❌ ');
       }

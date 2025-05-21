@@ -48,7 +48,7 @@ export function OffersCarousel() {
       <Carousel
         responsive={responsive}
         infinite={true}
-        partialVisbile={false}
+        partialVisibile={false}
         itemClass="carousel-Itens"
         autoPlay
         autoPlaySpeed={5000}

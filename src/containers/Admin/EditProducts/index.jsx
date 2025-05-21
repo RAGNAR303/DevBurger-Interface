@@ -15,7 +15,7 @@ import {
   GrupInputTwo,
   GrupInput,
   ContianerCheckBox,
-} from '../NewProducts/styles';
+} from './styles';
 import { useEffect, useState } from 'react';
 import { api } from '../../../services/api';
 import { toast } from 'react-toastify';
@@ -39,7 +39,7 @@ export function EditProducts() {
   const {
     state: { product },
   } = useLocation();
-  console.log(product);
+ 
 
   useEffect(() => {
     async function loadCategories() {
@@ -58,7 +58,7 @@ export function EditProducts() {
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data) => {
-    console.log(data);
+  
 
     const productFormData = new FormData();
     productFormData.append('name', data.name);

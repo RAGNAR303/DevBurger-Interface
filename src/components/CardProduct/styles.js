@@ -16,6 +16,8 @@ export const Container = styled.div`
   align-items: center;
   position: relative;
   border: 3px solid #61a120;
+
+  
   div {
     width: 100%;
     height: 80px;

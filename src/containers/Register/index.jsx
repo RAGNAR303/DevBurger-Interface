@@ -66,7 +66,7 @@ export function Register() {
       } else {
         throw new Error();
       }
-      console.log(status);
+      
     } catch (error) {
       toast.error(' Falha no sistema! Tente novamente!⛔ ');
     }

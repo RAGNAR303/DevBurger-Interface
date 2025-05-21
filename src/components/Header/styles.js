@@ -40,6 +40,7 @@ export const HeaderLink = styled(Link)`
   text-decoration: none;
   font-weight: 800;
   transition: color 200ms;
+
   &:hover {
     color: ${(props) => props.theme.green};
   }
@@ -54,10 +55,11 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   font-weight: 800;
   transition: color 200ms;
+
   &:hover {
     color: ${(props) => props.theme.green};
-    text-shadow: 0px 0px 3px 'rgba(110, 216, 3, 0.69)';
   }
+  
 `;
 
 export const Options = styled.div`

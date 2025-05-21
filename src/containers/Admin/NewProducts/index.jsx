@@ -69,7 +69,7 @@ export function NewProducts() {
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data) => {
-    console.log(data);
+   ;
 
     const productFormData = new FormData();
     productFormData.append('name', data.name);

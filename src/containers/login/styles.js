@@ -42,7 +42,13 @@ export const RightContainer = styled.div`
     font-weight: 800;
     a {
       color: ${(props) => props.theme.purple};
-      text-decoration: underline;
+      text-decoration: none;
+      transition: 0.5s ease-in-out;
+      margin-left: 5px;
+      &:hover {
+        font-weight: 600;
+        color: ${(props) => props.theme.orange};
+      }
     }
   }
 `;
@@ -95,6 +101,7 @@ export const InputContainer = styled.div`
 `;
 
 export const Link = styled(ReactLink)`
-  text-decoration: none;
+  outline: none;
+
   color: #fff;
 `;

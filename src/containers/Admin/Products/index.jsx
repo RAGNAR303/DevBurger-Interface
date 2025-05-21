@@ -8,12 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {
-  CheckCircle,
-  Pencil,
-  TrashSimple,
-  XCircle,
-} from '@phosphor-icons/react';
+import { CheckCircle, Pencil, XCircle } from '@phosphor-icons/react';
 import { formatPrice } from '../../../utils/formatPrice';
 import { useNavigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
@@ -26,7 +21,6 @@ export function Products() {
     async function loadProtucts() {
       const { data } = await api.get('/products');
       setproducts(data);
-      console.log(data);
     }
     loadProtucts();
   }, []);
@@ -78,9 +72,6 @@ export function Products() {
                     <GrupButton>
                       <EditButton onClick={() => editProduct(product)}>
                         <Pencil />
-                      </EditButton>
-                      <EditButton onClick={() => editProduct(product)}>
-                        <TrashSimple />
                       </EditButton>
                     </GrupButton>
                   </TableCell>

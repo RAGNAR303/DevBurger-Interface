@@ -6,37 +6,39 @@ export const Banner = styled.div`
   background: url('${BannerHome}');
   background-position: center;
   background-size: cover;
-  height: 450px;
+  height: 370px;
   display: flex;
-
+  width: 100% ;
+  
   h1 {
-    color: ${(props) => props.theme.purple};
+    font-size: 150px;
     font-family: 'Flavors', cursive;
-    font-size: 100px;
+    color: ${(props) => props.theme.purple};
+    line-height: 65px;
     position: absolute;
-    right: 40%;
-    top: 20%;
-    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    right: 10%;
+    top: 30%;
   }
   span {
-    color: rgb(255, 255, 255);
+    display: block;
     font-family: 'Flavors', cursive;
+    color: ${(props) => props.theme.white};
     font-size: 50px;
-    position: absolute;
-    right: 20%;
-    top: 40%;
-    text-shadow: 10px 10px 10px rgb(0, 0, 0);
+    font-weight: 400;
+    margin-top: 20px;
   }
 `;
 export const Container = styled.section`
   background:
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-    url('${BackgraoundSession}');
-  background-size: contain;
+    url('${BackgraoundSession}') no-repeat;
+  background-size: cover;
   background-position: center;
-
+  padding: 0;
+  margin: 0;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 `;
 export const Content = styled.div`
   /* padding-bottom: 70px; */

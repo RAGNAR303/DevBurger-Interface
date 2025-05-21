@@ -76,7 +76,7 @@ export function Header() {
           <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
             <Basket weight="duotone" size={24} />
             <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
-              Carrinho
+             Carrinho 
             </HeaderLink>
           </NavLink>
         </Options>

@@ -11,7 +11,7 @@ export function CategoriesCarousel() {
   useEffect(() => {
     async function loadCategories() {
       const { data } = await api.get('/categories');
-
+    
       setCategories(data);
     }
     loadCategories();
@@ -19,7 +19,7 @@ export function CategoriesCarousel() {
 
   const responsive = {
     superLargerDesktop: {
-      breakpoint: { max: 5000, min: 3000 },
+      breakpoint: { max: 4000, min: 3000 },
       items: 4,
     },
     desktop: {
@@ -41,8 +41,9 @@ export function CategoriesCarousel() {
       <Carousel
         responsive={responsive}
         infinite={true}
-        partialVisbile={false}
-        itemClass="carousel-Itens"
+        partialVisibile={false}
+        itemClass="carousel-itens"
+        centerMode={false}
         autoPlay
         autoPlaySpeed={5000}
         customTransition="all .5"
