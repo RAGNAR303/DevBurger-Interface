@@ -40,14 +40,16 @@ export const RightContainer = styled.div`
     color: ${(props) => props.theme.white};
     font-size: 18px;
     font-weight: 800;
+
     a {
       color: ${(props) => props.theme.purple};
       text-decoration: none;
-      transition: 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       margin-left: 5px;
+
       &:hover {
-        font-weight: 600;
         color: ${(props) => props.theme.orange};
+        text-decoration: underline;
       }
     }
   }
@@ -62,40 +64,7 @@ export const Title = styled.h2`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px;
+  gap: 10px;
   width: 100%;
   max-width: 400px;
-`;
-export const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
-
-  input {
-    background: ${(props) => props.theme.whiteBackgroundlinear};
-    width: 100%;
-    border: none;
-    height: 40px;
-    border: 2px solid ${(props) => props.theme.purple};
-    border-radius: 30px;
-    padding: 0 16px;
-  }
-  label {
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-  }
-  p {
-    color: rgb(255, 0, 0);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 80%;
-    height: 10px;
-  }
-`;
-export const Link = styled(ReactLink)`
-  text-decoration: none;
-  color: #fff;
 `;

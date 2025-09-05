@@ -98,15 +98,12 @@ export const Logout = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(174, 1, 1);
+  color: ${props => props.theme.red} ;
   background: none;
   border: none;
-  font-weight: 800;
-  font-size: 13px;
   gap: 2px;
-
-  &:hover {
-    color: rgb(233, 10, 10);
+&:hover {
+    color: ${props => props.theme.redHover} ;
     text-shadow: 0px 0px 3px rgba(251, 0, 0, 0.6);
   }
 `;

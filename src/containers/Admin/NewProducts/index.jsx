@@ -1,13 +1,13 @@
 import { Controller, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { Image } from '@phosphor-icons/react';
+import { Image, Tag } from '@phosphor-icons/react';
+import { Input } from '../../../components/Input';
 import {
   Container,
   Form,
   InputGroup,
   Label,
-  Input,
   LabelUpload,
   Select,
   SubmitButton,
@@ -69,8 +69,6 @@ export function NewProducts() {
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data) => {
-   ;
-
     const productFormData = new FormData();
     productFormData.append('name', data.name);
     productFormData.append('price', data.price * 100);
@@ -121,6 +119,7 @@ export function NewProducts() {
           <InputGroup>
             <Label>Categorias</Label>
             <Controller
+              icon={<Tag />}
               name="category"
               control={control}
               render={({ field }) => (

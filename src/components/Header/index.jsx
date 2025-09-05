@@ -30,7 +30,6 @@ export function Header() {
   const { admin: isAdmin } = JSON.parse(
     localStorage.getItem('devburger:userData'),
   );
-  //
 
   function logoutUser() {
     logout();
@@ -57,7 +56,10 @@ export function Header() {
         <Options>
           <Profile>
             {isAdmin ? (
-              <UserCircleGear weight="duotone" onClick={() => navigate('/admin/produtos')} />
+              <UserCircleGear
+                weight="duotone"
+                onClick={() => navigate('/admin/produtos')}
+              />
             ) : (
               <UserCircle color=" #9758a6" weight="bold" size={24} />
             )}
@@ -67,8 +69,7 @@ export function Header() {
                 Olá ,<span>{formatName(userInfo.name) || 'Fazer Login'}</span>
               </p>
               <Logout onClick={logoutUser}>
-                Sair
-                <SignOut  weight="bold" size={18} />
+                <SignOut onClick={logoutUser} weight="bold" size={18} />
               </Logout>
             </div>
             <h3>|</h3>
@@ -76,7 +77,7 @@ export function Header() {
           <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
             <Basket weight="duotone" size={24} />
             <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
-             Carrinho 
+              Carrinho
             </HeaderLink>
           </NavLink>
         </Options>

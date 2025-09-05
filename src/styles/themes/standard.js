@@ -14,7 +14,7 @@ export const standardTheme = {
   blackShadow1: ' rgba(0, 0, 0, 0.19) 0px 10px 20px ,  rgba(0, 0, 0, 0.23) 0px 6px 6px',
   blackShadow2: ' rgba(0, 0, 0, 0.23) 0px 6px 6px',
   fontBlack: 'rgb(37, 37, 37)',
-  red: ' rgb(174, 1, 1)',
+  red: ' rgb(147, 0, 0)',
   redHover: ' rgb(233, 10, 10)',
   fontFlavors: '"Flavors", cursive',
   fontPoppins: '"Poppins", sans-serif',

@@ -8,8 +8,8 @@ export const Banner = styled.div`
   background-size: cover;
   height: 370px;
   display: flex;
-  width: 100% ;
-  
+  width: 100%;
+
   h1 {
     font-size: 150px;
     font-family: 'Flavors', cursive;
@@ -31,13 +31,13 @@ export const Banner = styled.div`
 export const Container = styled.section`
   background:
     linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-    url('${BackgraoundSession}') no-repeat;
-  background-size: cover;
+    url('${BackgraoundSession}');
+
   background-position: center;
   padding: 0;
   margin: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 `;
 export const Content = styled.div`

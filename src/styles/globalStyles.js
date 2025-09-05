@@ -14,5 +14,9 @@ const globalStyles = createGlobalStyle`
 button , a{
     cursor: pointer;
 };
+
+body{
+    overflow-x: hidden;
+}
 `;
 export default globalStyles;

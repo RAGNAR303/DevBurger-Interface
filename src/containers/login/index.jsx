@@ -1,21 +1,21 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { api } from '../../services/api';
 import { toast } from 'react-toastify';
 import { useUser } from '../../hooks/UserContext';
 import {
   Container,
   Form,
-  InputContainer,
   LeftContainer,
   RightContainer,
   Title,
-  Link,
 } from './styles';
 import Logo from '../../assets/Logo.svg';
 import { Button } from '../../components/Button';
+import { EnvelopeSimple, Lock } from '@phosphor-icons/react';
+import { Input } from '../../components/Input';
 
 export function Login() {
   const navigate = useNavigate();
@@ -56,8 +56,6 @@ export function Login() {
               } else {
                 navigate('/');
               }
-
-             
             }, 2000);
             return 'Seja Bem-vindo(a) ✅';
           },
@@ -79,24 +77,22 @@ export function Login() {
           <br /> Acesse com seu <span>Login e senha.</span>
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <InputContainer>
-            <label>Email:</label>
-            <input
-              placeholder="exemplo@email.com"
-              type="email"
-              {...register('email')}
-            />{' '}
-            <p>{errors?.email?.message}</p>
-          </InputContainer>
-          <InputContainer>
-            <label>Senha:</label>
-            <input
-              placeholder="************"
-              type="password"
-              {...register('password')}
-            />
-            <p>{errors?.password?.message}</p>
-          </InputContainer>
+          <Input
+            type={'email'}
+            label={'Email:'}
+            icon={<EnvelopeSimple />}
+            placeholder={'exemplo@email.com'}
+            {...register('email')}
+            error={errors?.email?.message}
+          />
+          <Input
+            type={'password'}
+            placeholder={'digite sua senha'}
+            icon={<Lock />}
+            label={'Senha:'}
+            {...register('password')}
+            error={errors?.password?.message}
+          />
           <Button $red="red" type="submit">
             Entrar
           </Button>

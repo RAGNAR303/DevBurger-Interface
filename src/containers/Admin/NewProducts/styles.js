@@ -38,6 +38,7 @@ export const Label = styled.label`
   color: ${(props) => props.theme.purple};
   font-size: 17px;
 `;
+
 export const Input = styled.input`
   background: ${(props) => props.theme.whiteBackgroundlinear};
   width: 100%;
@@ -47,6 +48,7 @@ export const Input = styled.input`
   border-radius: 30px;
   padding: 0 16px;
 `;
+
 export const LabelUpload = styled.label`
   cursor: pointer;
   width: 100%;
@@ -78,13 +80,14 @@ export const Select = styled(ReactSelect)`
   overflow: hidden;
   border: 2px solid ${(props) => props.theme.purple};
 `;
+
 export const ContianerCheckBox = styled.div`
   display: flex;
   margin: 10px auto;
   align-content: center;
   gap: 20px;
 
-  input{
+  input {
     border-radius: 50%;
     height: 30px;
     width: 30px;

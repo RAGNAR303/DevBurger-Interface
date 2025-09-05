@@ -11,6 +11,7 @@ import '../styles.css';
 import { api } from '../../../services/api';
 import { toast } from 'react-toastify';
 import { useCart } from '../../../hooks/CartContext';
+
 export default function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();

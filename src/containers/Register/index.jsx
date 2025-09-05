@@ -1,20 +1,20 @@
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
 import { toast } from 'react-toastify';
 import {
   Container,
   Form,
-  InputContainer,
   LeftContainer,
   RightContainer,
   Title,
-  Link,
 } from './styles';
 import Logo from '../../assets/Logo.svg';
 import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { EnvelopeSimple, Lock, User } from '@phosphor-icons/react';
 
 export function Register() {
   const navigate = useNavigate();
@@ -66,7 +66,6 @@ export function Register() {
       } else {
         throw new Error();
       }
-      
     } catch (error) {
       toast.error(' Falha no sistema! Tente novamente!⛔ ');
     }
@@ -80,42 +79,38 @@ export function Register() {
       <RightContainer>
         <Title>Criar Cadastro</Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <InputContainer>
-            <label>Nome:</label>
-            <input
-              placeholder="Coloque seu nome"
-              type="nome"
-              {...register('name')}
-            />{' '}
-            <p>{errors?.name?.message}</p>
-          </InputContainer>
-          <InputContainer>
-            <label>Email:</label>
-            <input
-              placeholder="exemplo@email.com"
-              type="email"
-              {...register('email')}
-            />{' '}
-            <p>{errors?.email?.message}</p>
-          </InputContainer>
-          <InputContainer>
-            <label>Senha:</label>
-            <input
-              placeholder="************"
-              type="password"
-              {...register('password')}
-            />
-            <p>{errors?.password?.message}</p>
-          </InputContainer>
-          <InputContainer>
-            <label>Confirme a Senha:</label>
-            <input
-              placeholder="************"
-              type="password"
-              {...register('confirmPassword')}
-            />
-            <p>{errors?.confirmPassword?.message}</p>
-          </InputContainer>
+          <Input
+            label={'Nome:'}
+            icon={<User />}
+            placeholder={'Coloque seu nome'}
+            type={'nome'}
+            {...register('name')}
+            error={errors?.name?.message}
+          />
+          <Input
+            label={'Email:'}
+            icon={<EnvelopeSimple />}
+            placeholder={'exemplo@email.com'}
+            type={'email'}
+            {...register('email')}
+            error={errors?.email?.message}
+          />
+          <Input
+            type={'password'}
+            placeholder={'digite sua senha...'}
+            icon={<Lock />}
+            label={'Senha:'}
+            {...register('password')}
+            error={errors?.password?.message}
+          />
+          <Input
+            label={'Confirme a Senha:'}
+            icon={<Lock />}
+            placeholder={'Confirme a Senha...'}
+            type={'password'}
+            {...register('confirmPassword')}
+            error={errors?.confirmPassword?.message}
+          />
           <Button $red="red" type="submit">
             Cadastrar
           </Button>
