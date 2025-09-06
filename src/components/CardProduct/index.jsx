@@ -5,6 +5,7 @@ import { useCart } from '../../hooks/CartContext';
 import { Basket, Plus, Heart } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { ProductControl } from '../ProductControl';
 
 export function CardProduct({ product }) {
   // console.log({ product });
@@ -13,12 +14,9 @@ export function CardProduct({ product }) {
   const { putProductInCart, increseProduct, decreseProduct, cartProducts } =
     useCart();
 
-  console.log(cartProducts.quantity);
-
   return (
     <Container>
       <span>
-        {' '}
         {product.offer ? (
           <Heart size={28} weight="fill" />
         ) : (
@@ -30,7 +28,6 @@ export function CardProduct({ product }) {
         <h1>{product.name}</h1>
         <CartInfo>
           <strong>{product.currencyValue}</strong>
-          <p>Qtd: {product.quantity}</p>
         </CartInfo>
       </main>
       <section>
@@ -38,10 +35,6 @@ export function CardProduct({ product }) {
           icon={<Plus size={28} weight="bold" />}
           onClick={() => putProductInCart(product)}
         />
-        {/* <CartButton
-          icon={<Plus size={28} weight="bold" />}
-          onClick={() => handleIncreseProduct(product)}
-        /> */}
 
         <CartButton
           onClick={() => navigate('/carrinho')}

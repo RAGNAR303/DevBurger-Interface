@@ -19,7 +19,7 @@ export const Container = styled.div`
   }
   .react-multiple-carousel__arrow:hover {
     scale: calc(1.07);
-    background: linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88));
+    background: ${(props) => props.theme.hoverPurple};
   }
 
   .react-multiple-carousel__arrow--left {

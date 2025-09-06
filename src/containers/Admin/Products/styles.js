@@ -34,16 +34,15 @@ export const EditButton = styled.button`
   transition: all 0.4s;
   &:hover {
     scale: calc(1.03);
-    background: linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88));
+    background: ${(props) => props.theme.hoverPurple};
   }
   &:active {
-    background: linear-gradient(180deg, rgb(95, 56, 105), rgb(53, 26, 59));
+    background: ${(props) => props.theme.activePurple};
   }
 
   svg {
     width: 25px;
     height: 25px;
-    
 
     &:hover {
       fill: ${(props) => props.theme.orange};

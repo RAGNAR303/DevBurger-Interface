@@ -52,7 +52,6 @@ export const CardImage = styled.img`
   height: 100px;
   position: absolute;
   top: -50px;
-  filter: drop-shadow(0, 10px, 10px rgba(0, 0, 0, 0.5));
 `;
 
 export const CartInfo = styled.div`
@@ -68,7 +67,6 @@ export const CartInfo = styled.div`
     line-height: 20px;
   }
 
-  p{
-    
+  p {
   }
 `;

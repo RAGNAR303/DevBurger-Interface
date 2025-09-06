@@ -5,12 +5,12 @@ import { Button } from '../index';
 import { formatPrice } from '../../utils/formatPrice';
 import { useNavigate } from 'react-router-dom';
 import {
-  ButtonGroup,
   DeleteProduct,
   EmptyCart,
   ProductImage,
   ProductTotalPrice,
 } from './styles';
+import { ProductControl } from '../ProductControl';
 export function CartItens() {
   const { cartProducts, increseProduct, decreseProduct, deleteProduct } =
     useCart();
@@ -38,11 +38,7 @@ export function CartItens() {
               <Table.Td>{product.name}</Table.Td>
               <Table.Td>{product.currencyValue}</Table.Td>
               <Table.Td>
-                <ButtonGroup>
-                  <button onClick={() => decreseProduct(product.id)}>-</button>
-                  {product.quantity}
-                  <button onClick={() => increseProduct(product.id)}>+</button>
-                </ButtonGroup>
+                <ProductControl product={product} />
               </Table.Td>
               <Table.Td>
                 <ProductTotalPrice>

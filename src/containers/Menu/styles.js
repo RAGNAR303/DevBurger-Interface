@@ -74,7 +74,7 @@ export const CategoryButton = styled(Link)`
 
   &:hover {
     scale: calc(1.02);
-    background: linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88));
+    background: ${(props) => props.theme.hoverPurple};
   }
 `;
 
