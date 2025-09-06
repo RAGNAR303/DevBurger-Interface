@@ -41,12 +41,12 @@ export function Header() {
         <Navigation>
           <NavLink to={'/inicio'} $isActive={pathname === '/inicio'}>
             <House weight="duotone" size={24} />
-            Home
+            <p>Home</p>
           </NavLink>
           <h3>|</h3>
           <NavLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
             <CookingPot weight="duotone" size={24} />
-            Carápio
+            <p>Carápio</p>
           </NavLink>
         </Navigation>
         <Options>
@@ -72,7 +72,7 @@ export function Header() {
           </Profile>
           <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
             <Basket weight="duotone" size={24} />
-            Carrinho
+            <p>Carrinho</p>
           </NavLink>
         </Options>
       </Content>

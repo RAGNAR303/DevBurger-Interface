@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Textura from '../../assets/Textura.svg';
+// import Textura from '../../assets/Textura.svg';
+import Textura from '../../assets/Textura.jpg';
 import BackgraoundSession from '../../assets/fundoB.png';
 import { Link as ReactLink } from 'react-router';
 

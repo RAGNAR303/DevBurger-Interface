@@ -43,13 +43,16 @@ export const NavLink = styled(Link)`
   gap: 5px;
   color: ${(props) => (props.$isActive ? '  #61a120' : '  #9758a6 ')};
   text-decoration: none;
-  font-weight: 800;
+
   transition: color 200ms;
 
   &:hover {
     color: ${(props) => props.theme.green};
   }
-  
+
+  p {
+    font-weight: 800;
+  }
 `;
 
 export const Options = styled.div`
@@ -88,12 +91,12 @@ export const Logout = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.red} ;
+  color: ${(props) => props.theme.red};
   background: none;
   border: none;
   gap: 2px;
-&:hover {
-    color: ${props => props.theme.redHover} ;
+  &:hover {
+    color: ${(props) => props.theme.redHover};
     text-shadow: 0px 0px 3px rgba(251, 0, 0, 0.6);
   }
 `;

@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin: 20px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1280px;
+  overflow: hidden;
+  transition: all 0.7s;
+
   .carousel-Itens {
     padding: 0 20px;
   }

@@ -11,7 +11,7 @@ export function CategoriesCarousel() {
   useEffect(() => {
     async function loadCategories() {
       const { data } = await api.get('/categories');
-    
+
       setCategories(data);
     }
     loadCategories();
@@ -28,7 +28,7 @@ export function CategoriesCarousel() {
     },
     tablet: {
       breakpoint: { max: 1280, min: 690 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 690, min: 0 },

@@ -17,7 +17,8 @@ export function OffersCarousel() {
         .filter((product) => product.offer)
         .map((product) => ({
           currencyValue: formatPrice(product.price),
-          ...product,}));
+          ...product,
+        }));
       setOffers(onlyOffers);
     }
     loadProtucts();
@@ -26,7 +27,7 @@ export function OffersCarousel() {
   const responsive = {
     superLargerDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1280 },
@@ -34,7 +35,7 @@ export function OffersCarousel() {
     },
     tablet: {
       breakpoint: { max: 1280, min: 690 },
-      items: 2,
+      items: 4,
     },
     mobile: {
       breakpoint: { max: 690, min: 0 },

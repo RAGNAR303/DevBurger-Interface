@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 20px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1280px;
 
   .carousel-item {
     padding-right: 40px;
