@@ -94,8 +94,8 @@ export function Menu() {
             {category.name}
           </CategoryButton>
         ))}
-        <ReturnButton type="button" onClick={() => navigate('/')}>
-          Inicio
+        <ReturnButton type="button" to={'/inicio'}>
+          Home
         </ReturnButton>
       </CategoryMenu>
       <ProductsContainer>

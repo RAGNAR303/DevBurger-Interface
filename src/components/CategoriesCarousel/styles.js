@@ -5,12 +5,12 @@ export const Container = styled.div`
   margin: 20px;
   width: 100%;
   margin: 0 auto;
-  max-width: 1280px;
-  .carousel-itens {
+  max-width: 1200px;
+
+  .carousel-item {
     padding-right: 40px;
     box-sizing: border-box;
   }
-  
 
   .react-multiple-carousel__arrow {
     background: ${(props) => props.theme.purpleBackgroundlinear};
@@ -57,7 +57,6 @@ export const Title = styled.h2`
 `;
 
 export const ContainerItems = styled.div`
-  /* position: relative; */
   background: url('${(props) => props.$imageUrl}') no-repeat;
   background-position: center;
   background-size: cover;
@@ -90,8 +89,8 @@ export const ContainerItems = styled.div`
   }
 `;
 export const CategoryButton = styled(Link)`
-  color:  ${(props) => props.theme.purple} ;
-  text-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.72) ;
+  color: ${(props) => props.theme.purple};
+  text-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.72);
   padding: 5px 20px;
   border-radius: 10px;
   font-size: 30px;

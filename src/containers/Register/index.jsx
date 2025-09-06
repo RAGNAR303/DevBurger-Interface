@@ -12,8 +12,7 @@ import {
   Title,
 } from './styles';
 import Logo from '../../assets/Logo.svg';
-import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
+import { Button, Input } from '../../components';
 import { EnvelopeSimple, Lock, User } from '@phosphor-icons/react';
 
 export function Register() {

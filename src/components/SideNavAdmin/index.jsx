@@ -5,11 +5,9 @@ import { Container, Footer, NavLink, NavLinkContainer } from './styles';
 import { useUser } from '../../hooks/UserContext';
 import { useResolvedPath } from 'react-router-dom';
 
-
 export function SideNavAdmin() {
   const { logout } = useUser();
   const { pathname } = useResolvedPath();
-
 
   return (
     <Container>
@@ -28,11 +26,11 @@ export function SideNavAdmin() {
       </NavLinkContainer>
       <Footer>
         <NavLink to="/login" onClick={logout}>
-          <SignOut className='icon' />
+          <SignOut className="icon" />
           <span>Sair</span>
         </NavLink>
-        <NavLink to="/">
-          <House className='icon'/>
+        <NavLink to="/inicio">
+          <House className="icon" />
           <span>Home</span>
         </NavLink>
       </Footer>

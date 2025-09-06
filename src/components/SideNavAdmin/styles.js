@@ -5,7 +5,7 @@ export const Container = styled.nav`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: ${(props) => props.theme.blacklinear};
 
   img {

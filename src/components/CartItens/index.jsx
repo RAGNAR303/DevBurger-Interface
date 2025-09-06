@@ -19,7 +19,7 @@ export function CartItens() {
   return (
     <Table.Root>
       <Table.Header>
-        <Table.Tr>
+        <Table.Tr colSpan={7}>
           <Table.Th>Itens</Table.Th>
           <Table.Th></Table.Th>
           <Table.Th>Preço</Table.Th>
@@ -61,27 +61,23 @@ export function CartItens() {
             <Table.Td colSpan={7}>
               <EmptyCart>
                 <span>Não há itens no carrinho</span>
+
+                <Button
+                  onClick={() => navigate('/cardapio')}
+                  style={{
+                    height: 40,
+                    width: 230,
+                    fontSize: 18,
+                  }}
+                >
+                  Adicinar mais produts
+                </Button>
               </EmptyCart>
             </Table.Td>
           </Table.Tr>
         )}
-        <Table.Tr>
-          <Table.Td colSpan={7}>
-            <Table.Footer >
-              <Button
-                onClick={() => navigate('/cardapio')}
-                style={{
-                  height: 40,
-                  width: 230,
-                  fontSize: 18,
-                }}
-              >
-                Adicinar mais produts
-              </Button>
-            </Table.Footer>
-          </Table.Td>
-        </Table.Tr>
       </Table.Body>
+      <Table.Footer></Table.Footer>
     </Table.Root>
   );
 }

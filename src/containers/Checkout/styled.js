@@ -13,7 +13,7 @@ export const Container = styled.div`
     url('${BackgraoundSession}');
   background-position: center;
   background-repeat: repeat;
-  background-size: cover;
+ 
 `;
 export const Banner = styled.div`
   display: flex;

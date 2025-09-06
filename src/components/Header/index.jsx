@@ -5,7 +5,7 @@ import { useUser } from '../../hooks/UserContext';
 import {
   Container,
   Content,
-  HeaderLink,
+  // HeaderLink,
   Logout,
   Navigation,
   NavLink,
@@ -39,18 +39,14 @@ export function Header() {
     <Container>
       <Content>
         <Navigation>
-          <NavLink to={'/'} $isActive={pathname === '/'}>
+          <NavLink to={'/inicio'} $isActive={pathname === '/inicio'}>
             <House weight="duotone" size={24} />
-            <HeaderLink to={'/'} $isActive={pathname === '/'}>
-              Home
-            </HeaderLink>
+            Home
           </NavLink>
           <h3>|</h3>
           <NavLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
             <CookingPot weight="duotone" size={24} />
-            <HeaderLink to={'/cardapio'} $isActive={pathname === '/cardapio'}>
-              Cardápio
-            </HeaderLink>
+            Carápio
           </NavLink>
         </Navigation>
         <Options>
@@ -76,9 +72,7 @@ export function Header() {
           </Profile>
           <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
             <Basket weight="duotone" size={24} />
-            <HeaderLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
-              Carrinho
-            </HeaderLink>
+            Carrinho
           </NavLink>
         </Options>
       </Content>

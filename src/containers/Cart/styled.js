@@ -10,7 +10,6 @@ export const Container = styled.div`
     url('${BackgraoundSession}');
   background-position: center;
   background-repeat: repeat;
-  background-size: cover;
 `;
 export const Banner = styled.div`
   display: flex;
@@ -20,7 +19,6 @@ export const Banner = styled.div`
   background: url('${Textura}');
   background-position: center;
   background-size: cover;
-  height: 130px;
 
   img {
     width: 110px;
@@ -30,24 +28,25 @@ export const Title = styled.div`
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  color:${(props) => props.theme.green};
+  color: ${(props) => props.theme.green};
   padding-bottom: 12px;
   position: relative;
+
   &::after {
     bottom: 0;
     position: absolute;
     content: '';
     height: 4px;
-    width: 70px;
-    background-color:${(props) => props.theme.green};
-    left: calc(50% - 35px);
+    width: 100px;
+    background-color: ${(props) => props.theme.green};
+    left: calc(50% - 50px);
   }
 `;
 
 export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 30%;
-  width: 100%;
+  width: 100vw;
   max-width: 1280px;
   padding: 40px;
   margin: 0 auto;

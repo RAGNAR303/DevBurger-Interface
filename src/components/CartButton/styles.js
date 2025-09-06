@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ContainerButton = styled.button`
   background: ${(props) => props.theme.purpleBackgroundlinear};
   width: 100%;
+  text-align: center;
   height: 52px;
   border: 0;
   border-radius: 20px;
@@ -20,8 +21,10 @@ export const ContainerButton = styled.button`
     background: linear-gradient(180deg, rgb(95, 56, 105), rgb(53, 26, 59));
   }
 
-  img {
+  svg {
+    margin-top: 10px;
     width: 30px;
+    color: ${(props) => props.theme.white};
 
     &:hover {
       color: ${(props) => props.theme.green};

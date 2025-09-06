@@ -42,7 +42,7 @@ export function CategoriesCarousel() {
         responsive={responsive}
         infinite={true}
         partialVisibile={false}
-        itemClass="carousel-itens"
+        itemClass="carousel-item"
         centerMode={false}
         autoPlay
         autoPlaySpeed={5000}

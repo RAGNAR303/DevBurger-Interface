@@ -13,9 +13,8 @@ import {
   Title,
 } from './styles';
 import Logo from '../../assets/Logo.svg';
-import { Button } from '../../components/Button';
+import { Button, Input } from '../../components';
 import { EnvelopeSimple, Lock } from '@phosphor-icons/react';
-import { Input } from '../../components/Input';
 
 export function Login() {
   const navigate = useNavigate();

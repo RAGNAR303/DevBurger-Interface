@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ProductImage = styled.img`
   height: 80px;
-  border-radius: 16px;
   margin: 0 10px;
 `;
 
@@ -50,12 +49,18 @@ export const DeleteProduct = styled.button`
 `;
 
 export const EmptyCart = styled.div`
+  display: flex;
   height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
   span {
     font-size: 40px;
     text-align: center;
     font-weight: bold;
+    line-height: 40px;
   }
 `;
 

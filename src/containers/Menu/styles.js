@@ -42,21 +42,24 @@ export const Banner = styled.div`
 `;
 export const CategoryMenu = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   margin: 50px 0;
+  padding: 15px 50px;
 `;
 
 export const CategoryButton = styled(Link)`
   text-decoration: none;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   color: ${(props) => props.theme.orange};
-  font-size: 24px;
+  font-size: 20px;
   height: 52px;
   font-weight: 900;
   border-radius: 20px;
   padding: 10px 20px;
-  line-height: 20px;
   border: none;
   border-bottom: ${(props) => props.$isActiveCategory && `5px solid   #ff8c05`};
   box-shadow:
@@ -70,30 +73,32 @@ export const CategoryButton = styled(Link)`
   transition: 0.5s ease-in-out;
 
   &:hover {
-    scale: calc(1.07);
+    scale: calc(1.02);
+    background: linear-gradient(180deg, rgb(116, 68, 128), rgb(79, 38, 88));
   }
 `;
 
 export const ProductsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 60px;
-  gap: 80px;
+  gap: 80px 40px;
   justify-content: center;
   max-width: 1500px;
-  margin: 50px auto 0px;
+  margin: 50px auto 0;
 `;
 
 export const ReturnButton = styled(Link)`
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   cursor: pointer;
   color: ${(props) => props.theme.orange};
-  font-size: 24px;
-  height: 52px;
+  font-size: 20px;
   font-weight: 900;
   border-radius: 20px;
   padding: 10px 20px;
-  line-height: 20px;
+
   border: none;
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -101,8 +106,8 @@ export const ReturnButton = styled(Link)`
   background: ${(props) => props.theme.purpleBackgroundlinear};
   transition: 0.5s ease-in-out;
   &:hover {
-    scale: calc(1.07);
-    border-bottom: 5px solid ${(props) => props.theme.orange};
+    scale: calc(1.02);
+
     background: linear-gradient(180deg, #61a120, rgb(71, 118, 24));
   }
 `;

@@ -13,6 +13,8 @@ export function CartResume() {
   const { cartProducts, clearCart } = useCart();
   const { userInfo } = useUser();
   const navigate = useNavigate();
+
+  
   useEffect(() => {
     const sumAllItems = cartProducts.reduce((acc, current) => {
       return current.price * current.quantity + acc;

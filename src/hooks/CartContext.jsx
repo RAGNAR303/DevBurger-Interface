@@ -105,19 +105,6 @@ export const CartProvider = ({ children }) => {
   const [cartProducts, setcartProducts] = useState([]);
   const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true); // Sinaliza que estamos no cliente
-
-    const clientCartData = localStorage.getItem('devburger:cartInfo');
-    if (clientCartData) {
-      setcartProducts(JSON.parse(clientCartData));
-    }
-  }, []);
-
-  const updateLocalStorage = (products) => {
-    localStorage.setItem('devburger:cartInfo', JSON.stringify(products));
-  };
-
   const putProductInCart = (product) => {
     const cartIndex = cartProducts.findIndex((prd) => prd.id === product.id);
     let newProductsInCart = [];
@@ -150,21 +137,36 @@ export const CartProvider = ({ children }) => {
       prd.id === productId ? { ...prd, quantity: prd.quantity + 1 } : prd,
     );
     setcartProducts(newCart);
-    updateLocalStorage(newCart);
+    updateLocalStorage(newCart); // Manda para local storage
   };
 
+  // Diminuir a quantidade
   const decreseProduct = (productId) => {
     const cartIndex = cartProducts.findIndex((prd) => prd.id === productId);
 
     if (cartProducts[cartIndex].quantity > 1) {
-      const newCart = cartProducts.map((prd) =>
-        prd.id === productId ? { ...prd, quantity: prd.quantity - 1 } : prd,
+      const newCart = cartProducts.map(
+        (prd) =>
+          prd.id === productId ? { ...prd, quantity: prd.quantity - 1 } : prd, // Se for mair que 1 ele diminui
       );
       setcartProducts(newCart);
-      updateLocalStorage(newCart);
+      updateLocalStorage(newCart); // Manda para local storage
     } else {
-      deleteProduct(productId);
+      deleteProduct(productId); // Se QTd for 1 ele chama a função de deletar
     }
+  };
+
+  useEffect(() => {
+    setIsClient(true); // Sinaliza que estamos no cliente
+
+    const clientCartData = localStorage.getItem('devburger:cartInfo');
+    if (clientCartData) {
+      setcartProducts(JSON.parse(clientCartData));
+    }
+  }, []);
+
+  const updateLocalStorage = (products) => {
+    localStorage.setItem('devburger:cartInfo', JSON.stringify(products));
   };
 
   // Não renderiza nada até garantir que estamos no cliente

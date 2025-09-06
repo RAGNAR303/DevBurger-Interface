@@ -34,17 +34,7 @@ export const Navigation = styled.div`
     gap: 10px;
   }
 `;
-export const HeaderLink = styled(Link)`
-  font-size: 18px;
-  color: ${(props) => (props.$isActive ? '  #61a120' : '  #9758a6 ')};
-  text-decoration: none;
-  font-weight: 800;
-  transition: color 200ms;
 
-  &:hover {
-    color: ${(props) => props.theme.green};
-  }
-`;
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;

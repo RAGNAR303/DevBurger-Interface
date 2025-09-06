@@ -3,7 +3,7 @@ import ReactSelect from 'react-select';
 import { Button } from '../../../components';
 export const Container = styled.div`
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   min-height: 100vh;
 `;
@@ -14,6 +14,7 @@ export const Form = styled.form`
   border-radius: 20px;
   width: 100%;
   max-width: 800px;
+  height: 400px;
   padding: 32px;
   background: ${(props) => props.theme.blacklinear};
   box-shadow: ${(props) => props.theme.blackShadow1};
