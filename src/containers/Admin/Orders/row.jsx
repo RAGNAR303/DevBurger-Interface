@@ -45,7 +45,7 @@ export function Row({ row, orders, setOrders }) {
         <TableCell>
           <IconButton
             aria-label="expand row"
-            size="small"
+            size="large"
             onClick={() => setOpen(!open)}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}

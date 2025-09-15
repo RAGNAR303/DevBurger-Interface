@@ -42,13 +42,14 @@ import { createTheme } from '@mui/material';
         },
         head: {
       padding: "20px",
-          backgroundColor: '#9758a6',
+          
           color: ' #ff8c05',
           fontWeight: 'bold',
         },
         body: {
           color: ' #9758a6',
           fontWeight: 'bold',
+        
         },
       },
     },

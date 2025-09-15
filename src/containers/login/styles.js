@@ -13,7 +13,6 @@ export const LeftContainer = styled.div`
   background: url('${Textura}');
   background-size: cover;
   background-position: center;
-
   height: 100%;
   width: 100%;
   max-width: 50%;
