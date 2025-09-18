@@ -7,7 +7,6 @@ Com a mentoria de Agustinho Neto(Back-End) e Rodolfo Mori(Front-End), no curso D
 <br>
 <br>
 <br>
-__________________________________________________________________________________________________________________________________
 <br>
 <br>
 <h2>Login & Cadastro</h2>
