@@ -4,7 +4,6 @@ import { Container } from './style';
 export function ProductControl({ product }) {
   const { decreseProduct, increseProduct } = useCart();
 
-  console.log(product);
 
   return (
     <Container>

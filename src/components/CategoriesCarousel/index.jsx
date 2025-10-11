@@ -53,7 +53,7 @@ export function CategoriesCarousel() {
           <ContainerItems key={category.id} $imageUrl={category.url}>
             <CategoryButton
               onClick={() => {
-                console.log('clicou', category.id);
+          
                 navigate({
                   pathname: 'cardapio',
                   search: `?categoria=${category.id}`,

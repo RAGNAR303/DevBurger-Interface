@@ -30,7 +30,7 @@ export function Header() {
   const { logout, userInfo } = useUser();
   const { cartProducts } = useCart();
 
-  console.log(cartProducts);
+
 
   const { admin: isAdmin } = JSON.parse(
     localStorage.getItem('devburger:userData'),
