@@ -13,21 +13,18 @@ export const ContainerButton = styled.button`
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   transition: all 0.4s;
+  color: ${(props) => props.theme.white};
   &:hover {
     scale: calc(1.03);
     background: ${(props) => props.theme.hoverPurple};
   }
   &:active {
     background: ${(props) => props.theme.activePurple};
+    color: ${(props) => props.theme.orange};
   }
 
   svg {
     margin-top: 10px;
     width: 30px;
-    color: ${(props) => props.theme.white};
-
-    &:hover {
-      color: ${(props) => props.theme.green};
-    }
   }
 `;

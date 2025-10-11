@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useResolvedPath } from 'react-router-dom';
 import { useUser } from '../../hooks/UserContext';
 import {
@@ -21,12 +21,17 @@ import {
   SignOut,
 } from '@phosphor-icons/react';
 import { formatName } from '../../utils/formatName';
-// import { QuantityCartNum } from '../../utils/QuantityCart';
+import { useCart } from '../../hooks/CartContext';
+
 
 export function Header() {
   const navigate = useNavigate();
   const { pathname } = useResolvedPath();
   const { logout, userInfo } = useUser();
+  const { cartProducts } = useCart;
+
+  console.log(cartProducts);
+
   const { admin: isAdmin } = JSON.parse(
     localStorage.getItem('devburger:userData'),
   );
@@ -39,7 +44,7 @@ export function Header() {
     <Container>
       <Content>
         <Navigation>
-          <NavLink to={'/inicio'} $isActive={pathname === '/inicio'}>
+          <NavLink to={'/'} $isActive={pathname === '/'}>
             <House weight="duotone" size={24} />
             <p>Home</p>
           </NavLink>

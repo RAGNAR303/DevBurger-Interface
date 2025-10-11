@@ -29,7 +29,7 @@ export function SideNavAdmin() {
           <SignOut className="icon" />
           <span>Sair</span>
         </NavLink>
-        <NavLink to="/inicio">
+        <NavLink to="/">
           <House className="icon" />
           <span>Home</span>
         </NavLink>

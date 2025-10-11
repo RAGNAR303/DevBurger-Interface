@@ -5,7 +5,6 @@ import {
   CategoryMenu,
   ProductsContainer,
   CategoryButton,
-  ReturnButton,
 } from './styles';
 import { api } from '../../services/api';
 import { formatPrice } from '../../utils/formatPrice';
@@ -36,7 +35,11 @@ export function Menu() {
     async function loadCategories() {
       const { data } = await api.get('/categories');
 
-      const newCategories = [{ id: 0, name: 'Todas' }, ...data];
+      const newCategories = [
+        { id: 0, name: 'Todas' },
+        ...data,
+        { id: 6, name: 'Home' },
+      ];
       setCategories(newCategories);
     }
 
@@ -55,6 +58,8 @@ export function Menu() {
   useEffect(() => {
     if (activeCategory === 0) {
       setFilterProdutcs(products);
+    } else if (activeCategory === 6) {
+      navigate('/');
     } else {
       const newfilterProducts = products.filter(
         (product) => product.category_id === activeCategory,
@@ -79,24 +84,17 @@ export function Menu() {
             key={category.id}
             $isActiveCategory={category.id === activeCategory}
             onClick={() => {
-              navigate(
-                {
-                  pathname: '/cardapio',
-                  search: `?categoria=${category.id}`,
-                },
-                {
-                  replace: true,
-                },
-              );
+              console.log('Clicou na categoria', category.id);
+              navigate({
+                pathname: '/cardapio',
+                search: `?categoria=${category.id}`,
+              });
               setActiveCategory(category.id);
             }}
           >
             {category.name}
           </CategoryButton>
         ))}
-        <ReturnButton type="button" to={'/inicio'}>
-          Home
-        </ReturnButton>
       </CategoryMenu>
       <ProductsContainer>
         {filteredProducts.map((products) => (
