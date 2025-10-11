@@ -5,6 +5,7 @@ import { useUser } from '../../hooks/UserContext';
 import {
   Container,
   Content,
+  CountCart,
   // HeaderLink,
   Logout,
   Navigation,
@@ -23,12 +24,11 @@ import {
 import { formatName } from '../../utils/formatName';
 import { useCart } from '../../hooks/CartContext';
 
-
 export function Header() {
   const navigate = useNavigate();
   const { pathname } = useResolvedPath();
   const { logout, userInfo } = useUser();
-  const { cartProducts } = useCart;
+  const { cartProducts } = useCart();
 
   console.log(cartProducts);
 
@@ -76,7 +76,11 @@ export function Header() {
             <h3>|</h3>
           </Profile>
           <NavLink to={'/carrinho'} $isActive={pathname === '/carrinho'}>
-            <Basket weight="duotone" size={24} />
+            <CountCart>
+              <span>{cartProducts && cartProducts.length}</span>
+              <Basket weight="duotone" size={24} />
+            </CountCart>
+
             <p>Carrinho</p>
           </NavLink>
         </Options>

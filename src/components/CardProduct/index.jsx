@@ -4,15 +4,11 @@ import { CartButton } from '../CartButton';
 import { useCart } from '../../hooks/CartContext';
 import { Basket, Plus, Heart } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { ProductControl } from '../ProductControl';
 
 export function CardProduct({ product }) {
-  // console.log({ product });
-
   const navigate = useNavigate();
-  const { putProductInCart, increseProduct, decreseProduct, cartProducts } =
-    useCart();
+  const { putProductInCart } = useCart();
 
   return (
     <Container>

@@ -104,3 +104,19 @@ export const Logout = styled.button`
 export const SignOut = styled.h1`
   margin-left: 15px;
 `;
+
+export const CountCart = styled.div`
+  position: relative;
+
+  span {
+    background: ${(props) => props.theme.orange};
+    color: ${(props) => props.theme.green};
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 10px;
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    font-weight: 800;
+  }
+`;
